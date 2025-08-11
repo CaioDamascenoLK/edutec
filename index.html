@@ -13,43 +13,65 @@
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
-    <model-viewer src="./pages/modelo3d/arduino_uno_board.glb"
-    camera-controls></model-viewer>
+    
+    
     <header>
+        <a href="../index.html">
+            <img src="./pages/img/logoMarcio.png" alt="logo MarcioBo">
+          </a>
         <nav>
             <ul>
-                <li><a href="../index.html">Home</a></li>
                 <li><a href="/pages/page1/page1.html">Sobre a Robótica</a></li>
                 <li><a href="/pages/page2/page2.html">Arduíno</a></li>
                 <li><a href="/pages/page3/page3.html">Material de Apoio</a></li>
                 <li><a href="/pages/page4/page4.html">Resistores e Leds</a></li>
-                <li><a href="/pages/page5/page5.html">Mnigame</a></li>
+                <li><a href="/pages/page5/page5.html">Minigame</a></li>
             </ul>
         </nav>
     </header>
-    <img src="./pages/img/logoMarcio.png" alt="logo MarcioBo">
+   
 
-    <div class="textos">
-        <h1>ROBÒTICA COM MARCIO.bo</h1>
-        <p>aprenda ludicamente robótica com o marcio.bo!</p>
-        <button>Comece por aqui!</button>
-    </div>
-
-    <div class="nos">
-        <p>Luiz Felippe</p>
-        <img src="./pages/img/luizDaRoca.png" alt="Luiz">
-
-        <p>Murilo Conti</p>
-        <img src="./pages/img/jukinhaDelicia.png" alt="Murilo Conti">
-
-        <p>Gabriel Peixinho</p>
-        <img src="./pages/img/peixinhoTentacao.png" alt="Gabriel Peixinho">
-
-        <p>Caio</p>
-        <img src="./pages/img/caioVaiDescendo.png" alt="Caio">
-
-        <p></p>
-        <img src="" alt="">
-    </div>
-</body>
-</html>
+    <section class="inicio">
+        <div class="texto">
+            <h1>ROBÓTICA COM<br> MARCIO.BO</h1>
+            <p>aprenda ludicamente robótica com o marcio.bo!</p>
+            <button>Comece por aqui!</button>
+        </div>
+        <img src="./pages/img/roboHome.png" alt="Robô Verde">
+    </section>
+    
+    <section class="membros-section">
+        <h2>QUEM SOMOS NÓS?</h2>
+        <div class="membros-container">
+            <div class="membros">
+                <img src="./pages/img/luizDaRoca.png" alt="Luiz">
+                <p>Luiz Felippe</p>
+                <span>@luz.alvespe</span>
+            </div>
+            <div class="membros">
+                <img src="./pages/img/jukinhaDelicia.png" alt="Murilo">
+                <p>Murilo Conti</p>
+                <span>@young_juka</span>
+            </div>
+            <div class="membros">
+                <img src="./pages/img/peixinhoTentacao.png" alt="Gabriel">
+                <p>Gabriel Peixinho</p>
+                <span>@ispeixinho</span>
+            </div>
+            <div class="membros">
+                <img src="./pages/img/caioVaiDescendo.png" alt="Caio">
+                <p>Caio</p>
+                <span>@caio_dca</span>
+            </div>
+            <div class="membros">
+                <img src="./pages/img/thiagoMaio.png" alt="Tiago">
+                <p>Tiago</p>
+                <span>@tiago_mai4</span>
+            </div>
+        </div>
+    </section>
+    
+    <model-viewer src="./pages/modelo3d/arduino_uno_board.glb"
+    camera-controls></model-viewer>
+    </body>
+    </html>
