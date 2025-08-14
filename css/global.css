@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lemon/Milk', sans-serif;
+  }
+  
+  :root {
+    --home: #2F8122;
+    --fundo: #0E0E19;
+    --verde: #4ED738;
+    --branco: #FFFFFF
+  }
+  
+  body {
+    background-color: var(--fundo);
+    color: var(--branco);
+  }
+  
+  header {
+    background-color: var(--fundo);
+    border: 4px solid var(--verde);
+    border-radius: 15px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+  }
+  
+  header img {
+    height: 60px;
+  }

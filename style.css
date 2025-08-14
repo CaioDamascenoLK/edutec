@@ -1,57 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Lemon/Milk', sans-serif;
-}
-
-:root {
-  --home: #2F8122;
-  --fundo: #0E0E19;
-  --verde: #4ED738;
-  --branco: #FFFFFF
-}
-
-body {
-  background-color: var(--fundo);
-  color: var(--branco);
-}
-
-header {
-  background-color: var(--fundo);
-  border: 4px solid var(--verde);
-  border-radius: 15px;
-  padding: 10px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 20px auto;
-}
-
-header img {
-  height: 60px;
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 30px;
-}
-
-nav a {
-  color: var(--branco);
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 0.95rem;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--verde);
-}
-
+@import "./css/nav.css";
+@import "./css/global.css";
 
 .inicio {
   display: flex;
@@ -61,6 +9,7 @@ nav a:hover {
   margin: 60px auto;
   padding: 0 40px;
 }
+
 .inicio img {
   max-width: 50%;
 }
@@ -81,7 +30,7 @@ nav a:hover {
   margin-bottom: 25px;
 }
 
-.texto button {
+.texto .button {
   background-color: var(--home);
   color: var(--fundo);
   border: none;
@@ -90,12 +39,15 @@ nav a:hover {
   font-size: 1rem;
   cursor: pointer;
   font-weight: bold;
-  transition: 0.3s;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
 }
 
-.texto button:hover {
+.texto .button:hover {
   background-color: var(--verde);
 }
+
 
 .MARCIO.BO img {
   max-width: 260px;
@@ -145,5 +97,10 @@ nav a:hover {
 
 .membros span {
   font-size: 0.85rem;
-  color:var(--branco);
+  color: var(--branco);
+}
+
+.membros-section a {
+  text-decoration: none;
+  color: var(--branco);
 }
