@@ -15,9 +15,9 @@
     border: none;
     border-radius: 50%;
     color: #fff;
-    font-size: 14px;
+    font-size: 1.rem;
     cursor: pointer;
-    padding: 6px;
+    padding: .6rem;
     transition: transform 0.2s;
   }
   

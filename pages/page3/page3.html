@@ -32,21 +32,45 @@
     
     <model-viewer class="modelo3D" src="/pages/modelo3d/arduino_uno_r3_elegoo.glb"
     camera-controls="" shadow-intensity="1" touch-action="pan-y" ar-status="not-presenting">
-        <!-- Hotspot 1 -->
-        <button class="hotspot" slot="hotspot-1" 
-        data-position="0.02 0.01 0.03" 
-        data-normal="0m 1m 0m"
-        data-info="Porta digital 13 - Saída PWM">
-        ⚡
-        </button>
 
-        <!-- Hotspot 2 -->
-        <button class="hotspot" slot="hotspot-2" 
-        data-position="-0.01 0.02 0.05" 
-        data-normal="0m 1m 0m"
-        data-info="Porta GND - Terra">
-        🔌
-        </button>
+    <button class="hotspot" slot="hotspot-pwm"
+        data-position="-0.50074 0.1 -0.25168"
+        data-normal="0m 1m 0m">
+        •
+        <span class="info-box">⚡</span>
+    </button>
+
+    <button class="hotspot" slot="hotspot-2"
+        data-position="0.52492 0.1 -0.25554"
+        data-normal="0m 1m 0m">
+        •
+        <span class="info-box">🔌</span>
+    </button>
+
+    <button class="hotspot" slot="hotspot-reset"
+        data-position="-0.45903 0.15 0.45"
+        data-normal="0m 1m 0m">
+        •
+        <span class="info-box">↻</span>
+    </button>
+
+    <button class="hotspot" slot="hotspot-entrada"
+        data-position="-0.214256 0.2 0.71048"
+        data-normal="0m 1m 0m">
+        •
+        <span class="info-box">🔷</span>
+    </button>
+
+    <button class="hotspot" slot="hotspot-pinos"
+        data-position="0.012412 0.1 -0.806974"
+        data-normal="0m 1m 0m">
+        •
+        <span class="info-box">🔶</span>
+    </button>
+
+
+
+
 </model-viewer>
     
     

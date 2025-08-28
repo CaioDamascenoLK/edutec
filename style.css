@@ -5,39 +5,43 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 0 40px;
+  /*max-width: 90rem;*/
+  margin: 6rem auto;
+  padding: 0 4rem;
 }
 
 .inicio img {
-  max-width: 50%;
-  padding-left: 5rem;/* img */
+  /*max-width: 50%;*/
+  padding-right: 5rem;/* img */
+  justify-content: end;
+  height: 70rem;
+  width: 70rem;
 }
 
 .texto {
   flex: 1;
+  padding-left: 20rem;
 }
 
 .texto h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-weight: bold;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
 }
 
 .texto p {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   color: #ccc;
-  margin-bottom: 25px;
+  margin-bottom: 2.5rem;
 }
 
 .texto .button {
   background-color: var(--home);
   color: var(--fundo);
   border: none;
-  padding: 14px 25px;
-  border-radius: 8px;
-  font-size: 1rem;
+  padding: 1.4rem 2.5rem;
+  border-radius: .8rem;
+  font-size: 1.5rem;
   cursor: pointer;
   font-weight: bold;
   text-decoration: none;
@@ -49,24 +53,20 @@
   background-color: var(--verde);
 }
 
-
-.MARCIO.BO img {
-  max-width: 260px;
-}
-
 .membros-section {
   text-align: center;
-  margin-top: 250px;
-  padding: 0 40px;
+  margin-top: 25rem;
+  padding: 0 4rem;
 }
 
 .membros-section h2 {
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-weight: bold;
-  margin-bottom: 50px;
+  margin-bottom: 5rem;
 }
 
 .membros-container {
+  margin-bottom: 5rem;
   display: flex;
   justify-content: center;
   gap: 4rem;
@@ -78,11 +78,11 @@
 }
 
 .membros img {
-  width: 150px;
-  height: 150px;
-  border-radius: 20px;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 2rem;
   object-fit: cover;
-  border: 2px solid var(--verde);
+  border: .2rem solid var(--verde);
   transition: transform 0.3s;
 }
 
@@ -91,13 +91,13 @@
 }
 
 .membros p {
-  margin-top: 10px;
-  font-size: 1rem;
+  margin-top: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
 }
 
 .membros span {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   color: var(--branco);
 }
 

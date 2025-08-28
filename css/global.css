@@ -5,7 +5,7 @@
     font-family: 'Lemon/Milk', sans-serif;
   }
 
-  :root {
+:root {
     font-size: 62.5%;
 }
 
@@ -27,16 +27,16 @@ body {
   
   header {
     background-color: var(--fundo);
-    border: 4px solid var(--verde);
-    border-radius: 15px;
-    padding: 10px 30px;
+    border: .4rem solid var(--verde);
+    border-radius: 1.5rem;
+    padding: 1rem 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: auto;
-    margin: 20px auto;
+    margin: 2rem auto;
   }
   
   header img {
-    height: 60px;
+    height: 6rem;
   }
