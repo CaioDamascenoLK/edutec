@@ -26,3 +26,38 @@
     background: rgba(0, 123, 255, 1);
   }
   
+  .side-panel {
+    position: fixed;
+    top: 0;
+    right: -400px; /* começa fora da tela */
+    width: 400px;
+    height: 100%;
+    background: #11111F;
+    color: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+  }
+  
+  .side-panel.active {
+    right: 0;
+  }
+  
+  .close-btn {
+    align-self: flex-end;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .panel-content {
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
