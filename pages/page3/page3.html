@@ -33,50 +33,72 @@
     <model-viewer class="modelo3D" src="/pages/modelo3d/arduino_uno_r3_elegoo.glb"
     camera-controls="" shadow-intensity="1" touch-action="pan-y" ar-status="not-presenting">
 
-    <button class="hotspot" slot="hotspot-pwm"
-        data-position="-0.50074 0.1 -0.25168"
-        data-normal="0m 1m 0m">
-        •
-        <span class="info-box">⚡</span>
+    <button class="hotspot" slot="hotspot-pwm" data-panel="panel-pwm"
+        data-position="-0.50074 0.1 -0.25168" data-normal="0m 1m 0m">
+        • <span class="info-box">⚡</span>
     </button>
 
-    <button class="hotspot" slot="hotspot-2"
-        data-position="0.52492 0.1 -0.25554"
-        data-normal="0m 1m 0m">
-        •
-        <span class="info-box">🔌</span>
+    <button class="hotspot" slot="hotspot-2" data-panel="panel-2"
+        data-position="0.52492 0.1 -0.25554" data-normal="0m 1m 0m">
+        • <span class="info-box">🔌</span>
     </button>
 
-    <button class="hotspot" slot="hotspot-reset"
-        data-position="-0.45903 0.15 0.45"
-        data-normal="0m 1m 0m">
-        •
-        <span class="info-box">↻</span>
+    <button class="hotspot" slot="hotspot-reset" data-panel="panel-reset"
+        data-position="-0.45903 0.15 0.45" data-normal="0m 1m 0m">
+        • <span class="info-box">↻</span>
     </button>
 
-    <button class="hotspot" slot="hotspot-entrada"
-        data-position="-0.214256 0.2 0.71048"
-        data-normal="0m 1m 0m">
-        •
-        <span class="info-box">🔷</span>
+    <button class="hotspot" slot="hotspot-entrada" data-panel="panel-entrada"
+        data-position="-0.214256 0.2 0.71048" data-normal="0m 1m 0m">
+        • <span class="info-box">🔷</span>
     </button>
 
-    <button class="hotspot" slot="hotspot-pinos"
-        data-position="0.012412 0.1 -0.806974"
-        data-normal="0m 1m 0m">
-        •
-        <span class="info-box">🔶</span>
+    <button class="hotspot" slot="hotspot-pinos" data-panel="panel-pinos"
+        data-position="0.012412 0.1 -0.806974" data-normal="0m 1m 0m">
+        • <span class="info-box">🔶</span>
     </button>
-
-
-
-
 </model-viewer>
 
-<div id="sidePanel" class="side-panel">
-    <button class="close-btn" onclick="closePanel()">✖</button>
-    <div id="panelContent" class="panel-content"></div>
+
+<div id="panel-pwm" class="side-panel">
+  <button class="close-btn" onclick="closePanel('panel-pwm')">✖</button>
+  <div class="panel-content">
+    <h2>Portas PWM ⚡</h2>
+    <p>Essas portas permitem gerar sinais modulados para controlar LEDs, motores e outros dispositivos.</p>
   </div>
+</div>
+
+<div id="panel-2" class="side-panel">
+  <button class="close-btn" onclick="closePanel('panel-2')">✖</button>
+  <div class="panel-content">
+    <h2>Conector de energia 🔌</h2>
+    <p>Permite alimentar o Arduino a partir de uma fonte externa.</p>
+  </div>
+</div>
+
+<div id="panel-reset" class="side-panel">
+  <button class="close-btn" onclick="closePanel('panel-reset')">✖</button>
+  <div class="panel-content">
+    <h2>Botão RESET ↻</h2>
+    <p>Reinicia o programa em execução no Arduino.</p>
+  </div>
+</div>
+
+<div id="panel-entrada" class="side-panel">
+  <button class="close-btn" onclick="closePanel('panel-entrada')">✖</button>
+  <div class="panel-content">
+    <h2>Entrada de energia 🔷</h2>
+    <p>Conector usado para fornecer energia ao Arduino Uno.</p>
+  </div>
+</div>
+
+<div id="panel-pinos" class="side-panel">
+  <button class="close-btn" onclick="closePanel('panel-pinos')">✖</button>
+  <div class="panel-content">
+    <h2>Pinos de conexão 🔶</h2>
+    <p>Pinos digitais e analógicos usados para sensores e atuadores.</p>
+  </div>
+</div>
     
     
     

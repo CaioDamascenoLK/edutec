@@ -29,7 +29,7 @@
   .side-panel {
     position: fixed;
     top: 0;
-    right: -400px; /* começa fora da tela */
+    right: -400px; 
     width: 400px;
     height: 100%;
     background: #11111F;
@@ -40,6 +40,7 @@
     display: flex;
     flex-direction: column;
     z-index: 999;
+    overflow-y: auto; 
   }
   
   .side-panel.active {
@@ -60,4 +61,5 @@
     font-size: 16px;
     line-height: 1.4;
   }
+  
   

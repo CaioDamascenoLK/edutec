@@ -1,15 +1,18 @@
 document.querySelectorAll('.hotspot').forEach(hotspot => {
   hotspot.addEventListener('click', () => {
-    const info = hotspot.getAttribute('data-info');
-    openPanel(info);
+    const panelId = hotspot.getAttribute('data-panel');
+    openPanel(panelId);
   });
 });
 
-function openPanel(content) {
-  document.getElementById("panelContent").innerText = content;
-  document.getElementById("sidePanel").classList.add("active");
+function openPanel(panelId) {
+  document.querySelectorAll('.side-panel').forEach(panel => {
+    panel.classList.remove('active');
+  });
+
+  document.getElementById(panelId).classList.add('active');
 }
 
-function closePanel() {
-  document.getElementById("sidePanel").classList.remove("active");
+function closePanel(panelId) {
+  document.getElementById(panelId).classList.remove('active');
 }
