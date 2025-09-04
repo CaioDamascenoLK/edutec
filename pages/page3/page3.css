@@ -1,6 +1,10 @@
 @import "/css/global.css";
 @import "/css/nav.css";
 
+#pg{
+  color: var(--verde);
+}
+
 .modelo3D {
     display: flex;
     justify-content: center;  
