@@ -5,13 +5,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /*max-width: 90rem;*/
-  margin: 6rem auto;
+  margin: auto;
   padding: 0 4rem;
 }
 
 .inicio img {
-  /*max-width: 50%;*/
   padding-right: 5rem;/* img */
   justify-content: end;
   height: 70rem;
@@ -55,7 +53,6 @@
 
 .membros-section {
   text-align: center;
-  margin-top: 25rem;
   padding: 0 4rem;
 }
 
@@ -104,4 +101,12 @@
 .membros-section a {
   text-decoration: none;
   color: var(--branco);
+}
+
+@media (max-width: 769px) {
+  * {
+    width: 100%;
+  }
+
+  
 }

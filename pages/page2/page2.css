@@ -4,3 +4,63 @@
 #pg{
     color: var(--verde);
 }
+
+.material {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8rem 10rem;
+}
+
+.material h1 {
+    font-family: 'Lemon/Milk', sans-serif;
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+.material img {
+    width: 40rem;
+}
+
+.videos {
+    padding: 4rem 10rem;
+}
+
+.videos h2 {
+    font-family: 'Lemon/Milk', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: #bbb;
+}
+
+.videos-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start;       
+    gap: 2rem;                    
+}
+
+.video-item {
+    width: 25rem;       
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.video-item img {
+    width: 100%;
+    height: 14rem;     
+    object-fit: cover; 
+    border-radius: .8rem;
+    display: block;
+}
+.video-item p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    color: #fff;
+    line-height: 1.4;
+    min-height: 4rem; 
+}

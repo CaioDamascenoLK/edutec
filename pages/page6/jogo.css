@@ -1,7 +1,7 @@
 @import "/css/global.css";
 @import "/css/nav.css";
 
-* { box-sizing: border-box; }
+* { box-sizing: border-box;}
 :root {
   --bg: #0e0f14;
   --fg: #e7e9f0;
@@ -15,8 +15,13 @@ html, body {
   margin: 0;
   background: radial-gradient(1200px 800px at 20% 10%, #151a27 0%, var(--bg) 60%);
   color: var(--fg);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, "Apple Color Emoji", "Segoe UI Emoji";
 }
+
+body a {
+  text-decoration: none;
+  color: var(--branco);
+}
+
 #app {
   max-width: 900px;
   margin: 0 auto;

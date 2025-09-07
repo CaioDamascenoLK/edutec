@@ -33,14 +33,14 @@
   .side-panel {
     position: fixed;
     top: 0;
-    right: -400px; 
-    width: 400px;
+    right: -40rem; 
+    width: 40rem;
     height: 100%;
     background: #11111F;
     color: white;
-    box-shadow: -2px 0 10px rgba(0,0,0,0.5);
+    box-shadow: -.2rem 0 1rem rgba(0,0,0,0.5);
     transition: right 0.3s ease-in-out;
-    padding: 20px;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     z-index: 999;
@@ -55,15 +55,38 @@
     align-self: flex-end;
     background: transparent;
     border: none;
-    font-size: 20px;
+    font-size: 2rem;
     color: white;
     cursor: pointer;
   }
   
   .panel-content {
-    margin-top: 20px;
-    font-size: 16px;
+    margin-top: 2rem;
+    font-size: 1.6rem;
     line-height: 1.4;
   }
+  .intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 6rem 10rem;
+  }
   
+  .intro img {
+    width: 35rem;
+    padding-right: 8rem;
+  }
   
+  .intro-texto h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: var(--branco);
+  }
+  
+  .intro-texto p {
+    font-family: 'TT Drugs Trial', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    max-width: 50rem;
+  }
