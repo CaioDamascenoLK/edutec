@@ -29,13 +29,13 @@
 
 .texto p {
   font-size: 1.5rem;
-  color: #ccc;
+  color: var(--branco);
   margin-bottom: 2.5rem;
 }
 
 .texto .button {
   background-color: var(--home);
-  color: var(--fundo);
+  color: var(--branco);
   border: none;
   padding: 1.4rem 2.5rem;
   border-radius: .8rem;
@@ -49,6 +49,7 @@
 
 .texto .button:hover {
   background-color: var(--verde);
+  color: var(--fundo);
 }
 
 .membros-section {
@@ -101,12 +102,4 @@
 .membros-section a {
   text-decoration: none;
   color: var(--branco);
-}
-
-@media (max-width: 769px) {
-  * {
-    width: 100%;
-  }
-
-  
 }

@@ -36,7 +36,7 @@
     font-size: 1.4rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    color: #ccc;
+    color: var(--branco);
 }
 
 .minigame .botao-jogar {
@@ -53,4 +53,5 @@
 
 .minigame .botao-jogar:hover {
     background-color: var(--verde);
+    color: var(--fundo);
 }

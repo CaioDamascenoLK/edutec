@@ -22,6 +22,10 @@ body a {
   color: var(--branco);
 }
 
+p, .card .tela.ativa ul li{
+  font-family: 'tt-drugs-trial', sans-serif;
+}
+
 #app {
   max-width: 900px;
   margin: 0 auto;
@@ -124,4 +128,21 @@ body a {
   opacity: .7;
   font-size: 14px;
   margin-top: 2px;
+}
+
+.Voltar {
+  text-decoration: none;
+  font-size: 1.6rem;
+  background: var(--home);
+  color: var(--branco);
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  transition: 0.3s;
+  text-transform: uppercase;
+}
+
+.Voltar:hover {
+  background-color: var(--verde);
+  color: var(--fundo);
 }

@@ -28,9 +28,10 @@
 }
 
 .resistoresELeds p {
+  font-family: tt-drugs-trial, sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
-  color: #ccc;
+  color: var(--branco);
 }
 
 .resistoresELeds img {
@@ -51,6 +52,12 @@
 .led h2 {
   font-family: 'Lemon/Milk', sans-serif;
   font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--fundo);
+}
+
+.led h3 {
+  font-size: 1.6rem;
   margin-bottom: 1rem;
   color: var(--fundo);
 }
@@ -97,12 +104,13 @@
 }
 
 .arduino img {
-  width: 14rem;
+  height: 14rem;
+  width: 24rem;
 }
 
 .resistor {
   display: flex;
-  justify-content: space-between;
+  
   align-items: center;
   background: var(--verde);
   border-radius: 1rem;
@@ -115,10 +123,12 @@
   font-family: 'Lemon/Milk', sans-serif;
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  padding-left: 6rem;
   color: var(--fundo);
 }
 
 .resistor p {
+  padding-left: 6rem;
   font-size: 1.5rem;
   line-height: 1.6;
   max-width: 50rem;
@@ -126,5 +136,7 @@
 }
 
 .resistor img {
-  width: 20rem;
+  padding-left: 18rem;
+  height: 18rem;
+  width: 34rem;
 }
