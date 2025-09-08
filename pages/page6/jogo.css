@@ -1,7 +1,10 @@
 @import "/css/global.css";
 @import "/css/nav.css";
 
-* { box-sizing: border-box;}
+* { 
+  box-sizing: border-box;
+  padding: 0;
+}
 :root {
   --bg: #0e0f14;
   --fg: #e7e9f0;
@@ -57,9 +60,15 @@ p, .card .tela.ativa ul li{
   min-height: 420px;
   display: grid;
 }
-.tela { display: none; }
-.tela.ativa { display: grid; align-content: start; gap: 12px; }
-.tela h2 { margin: 8px 0 4px; font-size: 24px; }
+.tela {  
+  display: none; 
+}
+.tela.ativa { 
+  display: grid; align-content: start; gap: 12px;
+ }
+.tela h2 { 
+  margin: 8px 0 4px; font-size: 24px;
+ }
 
 .btn {
   background: linear-gradient(180deg, var(--accent), #27d38b);
@@ -71,9 +80,15 @@ p, .card .tela.ativa ul li{
   cursor: pointer;
   transition: transform .06s ease, filter .2s ease;
 }
-.btn:hover { filter: brightness(1.05); }
-.btn:active { transform: scale(.98); }
-.btn.grande { font-size: 18px; padding: 14px 20px; }
+.btn:hover { 
+  filter: brightness(1.05);
+ }
+.btn:active { 
+  transform: scale(.98);
+ }
+.btn.grande { 
+  font-size: 18px; padding: 14px 20px;
+ }
 
 .barra-tempo {
   height: 12px;
@@ -107,15 +122,25 @@ p, .card .tela.ativa ul li{
   cursor: pointer;
   transition: transform .06s ease, border-color .15s ease, background .15s ease;
 }
-.opcoes button:hover { border-color: var(--accent-2); transform: translateY(-1px); }
-.opcoes button:active { transform: scale(.98); }
-.opcoes button.correta { outline: 2px solid var(--accent); background: #0f1e1a; }
-.opcoes button.errada { outline: 2px solid var(--danger); background: #1d1114; }
+.opcoes button:hover { 
+  border-color: var(--accent-2); transform: translateY(-1px);
+ }
+.opcoes button:active {
+   transform: scale(.98); 
+  }
+.opcoes button.correta {
+   outline: 2px solid var(--accent); background: #0f1e1a;
+   }
+.opcoes button.errada { 
+  outline: 2px solid var(--danger); background: #1d1114;
+ }
 
 .dicas {
   margin: 0 0 12px 18px;
 }
-.dicas li { margin: 6px 0; }
+.dicas li { 
+  margin: 6px 0;
+ }
 
 .rodape {
   text-align: center;

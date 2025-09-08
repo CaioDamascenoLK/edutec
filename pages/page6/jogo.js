@@ -16,12 +16,12 @@
       tituloResultado: $("#titulo-resultado"),
     };
   
-    // Estado do jogo
+
     let pontos = 0;
     let vidas = 3;
     let nivel = 1;
     let acertosSeguidos = 0;
-    let tempoRestante = 100; // percentual
+    let tempoRestante = 100; 
     let timer = null;
 
     const microgames = [
