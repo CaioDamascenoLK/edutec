@@ -170,8 +170,6 @@
       prepararFila();
       atualizarHUD();
     }
-  
- 
     $("#btn-comecar").addEventListener('click', () => {
       resetar();
       trocarTela('jogo');
