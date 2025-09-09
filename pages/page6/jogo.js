@@ -107,7 +107,6 @@
         hud.barra.style.width = tempoRestante + "%";
         if (restante <= 0) {
           pararTimer();
-          // Tempo esgotado = erro
           feedback(false);
         }
       }, 100);
@@ -133,7 +132,7 @@
       });
   
       if (correta) {
-        const bonusTempo = Math.ceil(tempoRestante / 10); // até +10
+        const bonusTempo = Math.ceil(tempoRestante / 10); 
         acertosSeguidos += 1;
         const combo = acertosSeguidos >= 3 ? 5 : 0;
         const ganho = 10 + bonusTempo + combo;
@@ -148,7 +147,6 @@
       setTimeout(() => {
         if (vidas <= 0) fimDeJogo();
         else {
-          // A cada 5 acertos totais, subir de nível para acelerar o jogo
           const alvoNivel = 1 + Math.floor(pontos / 120);
           if (alvoNivel > nivel) nivel = alvoNivel;
           atualizarHUD();
@@ -173,7 +171,7 @@
       atualizarHUD();
     }
   
-    // Controles
+ 
     $("#btn-comecar").addEventListener('click', () => {
       resetar();
       trocarTela('jogo');
@@ -185,7 +183,7 @@
       proximaPergunta();
     });
   
-    // Atalhos de teclado 1–4
+ 
     window.addEventListener('keydown', (ev) => {
       const n = parseInt(ev.key, 10);
       if (!isNaN(n) && n >= 1 && n <= 4 && telas.jogo.classList.contains('ativa')) {
