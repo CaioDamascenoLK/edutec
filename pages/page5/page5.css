@@ -1,6 +1,10 @@
 @import "/css/global.css";
 @import "/css/nav.css";
 
+* {
+  max-width: 130rem;
+}
+
 #pg {
   color: var(--verde);
 }
