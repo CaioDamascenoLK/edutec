@@ -1,10 +1,6 @@
 @import "/css/global.css";
 @import "/css/nav.css";
 
-* {
-  max-width: 130rem;
-}
-
 #pg {
   color: var(--verde);
 }
@@ -141,6 +137,6 @@
 
 .resistor img {
   padding-left: 18rem;
-  height: 18rem;
+  height: 15rem;
   width: 34rem;
 }

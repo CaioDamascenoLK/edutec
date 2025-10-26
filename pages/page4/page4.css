@@ -62,8 +62,7 @@
 
 .historia .imgs-historia {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    flex-direction: column; 
 }
 
 .historia img {
