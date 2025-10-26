@@ -60,7 +60,7 @@
     max-width: 45rem;
 }
 
-.historia .imgs-historia {
+.imgs-historia {
     display: flex;
     flex-direction: column; 
 }
