@@ -5,34 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login / Cadastro</title>
     <link rel="stylesheet" href="login.css">
+    <script src="login.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <!-- Tela de Login -->
-        <div id="login-view">
-            <h1>Login</h1>
+    
+<div class="page">
+    <div class="logo">
+        <a href="/frontend/index.html">
+            <img src="/frontend/pages/img/logoMarcio.png" alt="logo MarcioBo">
+        </a>
+    </div>
+
+    <div class="left">
+        <div id="login-view" class="form-box">
+            <h1>Bem-vindo de volta!</h1>
+            <p class="sub">Digite suas credenciais para acessar sua conta</p>
             <form id="login-form">
-                <input type="email" id="login-email" placeholder="Email" required>
-                <input type="password" id="login-password" placeholder="Senha" required>
-                <button type="submit">Entrar</button>
+                <div class="input-group">
+                    <label for="login-email">Endereço de e-mail</label>
+                    <input type="email" id="login-email" placeholder="Digite seu e-mail" required>
+                </div>
+                <div class="input-group">
+                    <label for="login-password">
+                        Senha 
+                        <a href="#" class="forgot">Esqueceu a senha?</a>
+                    </label>
+                    <input type="password" id="login-password" placeholder="Digite sua senha" required>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Lembrar-me por 30 dias</label>
+                </div>
+
+                <button type="submit">Login</button>
             </form>
-            <p>Não tem uma conta? <a href="#" id="show-signup">Cadastre-se</a></p>
-            <p><a href="../../index.html">Voltar para o Início</a></p>
+            <p class="register-text">Não tem uma conta? Cadastre-se!
+                <a href="#" id="show-signup">Sign Up</a>
+            </p>
         </div>
 
-        <!-- Tela de Cadastro -->
-        <div id="signup-view" style="display: none;">
-            <h1>Cadastro</h1>
+        <div id="signup-view" class="form-box" style="display: none;">
+            <h1>Criar conta</h1>
+            <p class="sub">Preencha os dados para criar sua conta</p>
             <form id="signup-form">
-                <input type="text" id="signup-username" placeholder="Nome de usuário" required>
-                <input type="email" id="signup-email" placeholder="Email" required>
-                <input type="password" id="signup-password" placeholder="Senha" required>
-                <button type="submit">Cadastrar</button>
+
+                <div class="input-group">
+                    <label for="signup-username">Nome de usuário</label>
+                    <input type="text" id="signup-username" placeholder="Seu nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-email">Email</label>
+                    <input type="email" id="signup-email" placeholder="Digite seu email" required>
+                </div>
+                <div class="input-group">
+                    <label for="signup-password">Senha</label>
+                    <input type="password" id="signup-password" placeholder="Crie uma senha" required>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">Eu concordo com os termos e a política</label>
+                </div>
+
+                <button type="submit">Inscrever-se</button>
             </form>
-            <p>Já tem uma conta? <a href="#" id="show-login">Faça login</a></p>
-            <p><a href="../../index.html">Voltar para o Início</a></p>
+            <p class="register-text">Já possui uma conta?
+                <a href="#" id="show-login">Login</a>
+            </p>
         </div>
+
     </div>
-    <script src="login.js"></script>
+    <div class="right" style="background-image: url('/frontend/pages/img/loginfundo.png');"></div>
+
+</div>
 </body>
 </html>

@@ -1,52 +1,142 @@
 @import "/frontend/css/global.css";
+@import "/frontend/css/nav.css";
 body {
-    font-family: Arial, sans-serif;
+    background-color: var(--fundo);
+    color: var(--branco);
+    height: 100vh;
+    overflow: hidden;
+}
+.header {
+    width: 100%;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    text-decoration: none;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+}
+.page {
+    display: flex;
+    height: 100%;
+}
+
+.left {
+    width: 50%;
+    background-color: var(--fundo);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: var(--fundo);
+    padding: 3rem;
 }
 
-.login-container {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.form-box {
+    width: 360px;
 }
 
-.input-group {
+h1 {
+    font-size: 2.8rem;
     margin-bottom: 1rem;
 }
 
+.sub {
+    font-size: 1.4rem;
+    color: #cccccc;
+    margin-bottom: 3rem;
+}
+
+.input-group {
+    margin-bottom: 1.3rem;
+}
+
 .input-group label {
-    display: block;
+    font-size: 1.3rem;
+    color: #cccccc;
     margin-bottom: 0.5rem;
+    display: block;
 }
 
 .input-group input {
     width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    padding: 1.2rem;
+    background-color: #0f1320;
+    border: 1px solid #2a2e3d;
+    color: var(--branco);
+    border-radius: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.input-group input:focus {
+    border-color: var(--verde);
+    outline: none;
+}
+
+.forgot {
+    font-size: 1.1rem;
+    float: right;
+    color: var(--verde);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.checkbox-container label {
+    font-size: 1.2rem;
+    color: #ddd;
 }
 
 button {
     width: 100%;
-    padding: 0.7rem;
+    padding: .8rem;
     background-color: var(--verde);
-    color: white;
+    color: var(--fundo);
     border: none;
-    border-radius: 3px;
+    border-radius: 0.6rem;
     cursor: pointer;
-}
-
-p {
-    text-align: center;
+    font-size: 1.5rem;
     margin-top: 1rem;
+    transition: 0.2s;
 }
 
-a {
-    color: #007bff;
+button:hover {
+    opacity: 0.9;
+}
+
+.register-text {
+    text-align: center;
+    margin-top: 2rem;
+    color: #cccccc;
+    font-size: 1.3rem;
+}
+
+.register-text a {
+    color: var(--verde);
     text-decoration: none;
+}
+
+.right {
+    width: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
