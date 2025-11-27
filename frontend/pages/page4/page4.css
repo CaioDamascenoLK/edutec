@@ -1,0 +1,101 @@
+@import "/frontend/css/global.css";
+@import "/frontend/css/nav.css";
+
+#pg {
+    color: var(--verde);
+}
+
+.sbr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 8rem 10rem;
+    justify-content: space-between;
+}
+
+.sbr img {
+    width: 28rem;
+    height: 28rem;
+}
+
+.sbr h1 {
+    font-family: 'Lemon/Milk', sans-serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.sbr p {
+    font-family: 'TT Drugs Trial', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    max-width: 50rem;
+}
+
+.historia {
+    background-color: var(--verde);
+    color: var(--fundo);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem 10rem;
+    gap: 4rem;
+}
+
+.historia h1 {
+    font-family: 'Lemon/Milk', sans-serif;
+    font-size: 8rem;
+    margin-bottom: 2rem;
+}
+
+.historia h2 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.historia p {
+    font-family: 'TT Drugs Trial', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    max-width: 45rem;
+}
+
+.imgs-historia {
+    display: flex;
+    flex-direction: column; 
+}
+
+.historia img {
+    width: 22rem;
+    border-radius: 1rem;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+    padding: 8rem 10rem;
+}
+
+.section h2 {
+    font-family: 'Lemon/Milk', sans-serif;
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+}
+
+.section p {
+    font-family: 'TT Drugs Trial', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    max-width: 50rem;
+}
+
+.section img {
+    width: 35rem;
+    border-radius: 1rem;
+}
+
+.section.reverse {
+    flex-direction: row-reverse;
+}

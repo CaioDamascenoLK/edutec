@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Cadastro</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Tela de Login -->
+        <div id="login-view">
+            <h1>Login</h1>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" required>
+                <input type="password" id="login-password" placeholder="Senha" required>
+                <button type="submit">Entrar</button>
+            </form>
+            <p>Não tem uma conta? <a href="#" id="show-signup">Cadastre-se</a></p>
+            <p><a href="../../index.html">Voltar para o Início</a></p>
+        </div>
+
+        <!-- Tela de Cadastro -->
+        <div id="signup-view" style="display: none;">
+            <h1>Cadastro</h1>
+            <form id="signup-form">
+                <input type="text" id="signup-username" placeholder="Nome de usuário" required>
+                <input type="email" id="signup-email" placeholder="Email" required>
+                <input type="password" id="signup-password" placeholder="Senha" required>
+                <button type="submit">Cadastrar</button>
+            </form>
+            <p>Já tem uma conta? <a href="#" id="show-login">Faça login</a></p>
+            <p><a href="../../index.html">Voltar para o Início</a></p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

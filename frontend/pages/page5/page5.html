@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/tt-drugs-trial" rel="stylesheet">
+  <title>Resistores e LEDs</title>
+  <link rel="stylesheet" href="page5.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <a href="/frontend/index.html">
+        <img src="/frontend/pages/img/logoMarcio.png" alt="logo MarcioBo">
+      </a>
+    </div>
+
+    <nav>
+      <ul>
+          <li><a href="/frontend/pages/page4/page4.html">Sobre a Robótica</a></li>
+          <li><a href="/frontend/pages/page3/page3.html">Arduíno</a></li>
+          <li><a href="/frontend/pages/page2/page2.html">Material de Apoio</a></li>
+          <li><a href="/frontend/pages/page5/page5.html" id = "pg">Resistores e Leds</a></li>
+          <li><a href="/frontend/pages/page1/page1.html">Minigame</a></li>
+          <li><a href="/frontend/pages/login/login.html"><img src="/frontend/pages/img/user.png" alt="Imagem para login"></a></li>
+      </ul>
+  </nav>
+  </header>
+
+  <main>
+    <section class="resistoresELeds">
+      <div class="text">
+        <h1>Sobre resistores e leds</h1>
+        <p>O LED é um dispositivo externo utilizado comumente para iluminação, porém, podendo ser utilizado também para sinalizar, como por exemplo, um farol para carros.</p>
+      </div>
+      <img src="/frontend/pages/img/roboResistores.png" alt="Robo Resistores">
+    </section>
+
+    <section class="arduino">
+      <div class="text">
+        <h2>Como os LEDs e resistores são conectados ao Arduino?</h2>
+        <p>
+          O LED tem duas pernas: <br><br>
+          - A perna longa (ânodo) vai conectada a um pino digital do Arduino (por onde ele envia a energia). <br>
+          - A perna curta (cátodo) vai conectada ao GND (terra) do Arduino. <br><br>
+          O resistor entra no caminho da energia, geralmente entre o pino do Arduino e a perna longa do LED, ou entre a perna curta e o GND. Ambos funcionam, mas a ideia é que ele controla a quantidade de corrente que passa pelo LED.
+        </p>
+      </div>
+      <img src="/frontend/pages/img/jogoDosErros.png" alt="Arduino e LED">
+    </section>
+
+    <section class="led">
+      <img src="/frontend/pages/img/led.png" alt="LED">
+      <div class="text">
+        <h2>Para que os LEDs são usados com o Arduino?</h2>
+        <h3>Os LEDs são utilizados para várias coisas, como por exemplo:</h3>
+        <p>
+          - Mostrar se algo está ligado (como uma luz de "Power"). <br>
+          - Piscar com uma frequência (como um coração eletrônico). <br>
+          - Sinalizar alertas (ex: LED vermelho aceso se algo está errado). <br>
+          - Fazer efeitos de luz colorida (com LEDs RGB). <br>
+          - Criar decorações ou animações de luz.
+        </p>
+      </div>
+    </section>
+
+    <section class="resistor">
+      <div class="text">
+        <h2>O que são os resistores?</h2>
+        <p>
+          Resistores são componentes eletrônicos que limitam a quantidade de corrente elétrica que passa por um circuito. <br><br>
+          <b>Na robótica, resistores são usados para:</b> <br>
+          - Proteger componentes (ex: um LED pode queimar se receber muita corrente). <br>
+          - Controlar sinais elétricos (ex: em sensores). <br>
+          - Formar divisores de tensão (para regular a energia recebida). <br>
+          - Evitar curtos-circuitos, protegendo o circuito.
+        </p>
+      </div>
+      <div class="resistorimg">
+      <img src="/frontend/pages/img/resistor.png" alt="Resistor">
+    </div>
+    </section>
+  </main>
+</body>
+</html>
