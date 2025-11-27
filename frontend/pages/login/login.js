@@ -4,10 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showSignup = document.getElementById('show-signup');
     const showLogin = document.getElementById('show-login');
 
-    // Constrói a URL do backend dinamicamente para ser mais resiliente.
-    const currentHost = window.location.host;
-    const backendHost = currentHost.replace(/^\d+/, '3000');
-    const backendUrl = `https://${backendHost}`;
+    const backendUrl = 'http://localhost:3000';
 
     showSignup.addEventListener('click', (e) => {
         e.preventDefault();
