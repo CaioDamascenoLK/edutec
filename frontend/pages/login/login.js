@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showSignup = document.getElementById('show-signup');
     const showLogin = document.getElementById('show-login');
 
-    const backendUrl = 'http://localhost:3000';
+    const backendUrl = 'https://33637-firebase-edutecgit-1755167074922.cluster-kc2r6y3mtba5mswcmol45orivs.cloudworkstations.dev';
 
     showSignup.addEventListener('click', (e) => {
         e.preventDefault();
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('login-password').value;
 
         try {
-            const response = await fetch(`${backendUrl}/login`, {
+            const response = await fetch(`https://3333-firebase-edutecgit-1755167074922.cluster-kc2r6y3mtba5mswcmol45orivs.cloudworkstations.dev/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
@@ -49,28 +49,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const signupForm = document.getElementById('signup-form');
     signupForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const username = document.getElementById('signup-username').value;
-        const email = document.getElementById('signup-email').value;
-        const password = document.getElementById('signup-password').value;
-
-        try {
-            const response = await fetch(`${backendUrl}/signup`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, email, password })
-            });
-
-            if (response.ok) {
-                alert('Cadastro realizado com sucesso! Por favor, faça o login.');
-                signupForm.reset();
-                showLogin.click();
-            } else {
-                const errorMsg = await response.text();
-                alert(`Falha no cadastro: ${errorMsg}`);
-            }
-        } catch (error) {
-            console.error('Erro durante o cadastro:', error);
-            alert('Ocorreu um erro durante o cadastro. Por favor, tente novamente.');
-        }
+        sendUser();
     });
+
+    async function sendUser() {
+        const name = document.querySelector("#signup-username").value;
+        const email = document.querySelector("#signup-email").value;
+        const password = document.querySelector("#signup-password").value;
+
+        const user = {
+            name,
+            email,
+            password
+        }
+
+        const response = await fetch(`https://33637-firebase-edutecgit-1755167074922.cluster-kc2r6y3mtba5mswcmol45orivs.cloudworkstations.dev/cadastrar`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ user }) 
+        })
+
+        const data = await response.json()
+        alert(data.mensage)
+
+        window.location.href = "../index.html"
+    }
 });
