@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const backendUrl = 'http://localhost:3333';
 
-
     fetch(`${backendUrl}/ranking`)
         .then(response => response.json())
         .then(data => {

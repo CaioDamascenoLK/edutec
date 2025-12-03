@@ -15,7 +15,6 @@ const database = mysql2.createPool({
     connectionLimit: 10
 })
 
-// Enable CORS for all routes and all methods
 app.use(cors());
 
 app.use(express.json())
@@ -68,7 +67,6 @@ app.post("/cadastrar", (request, response) => {
     })
 })
 
-// PUT /users/:userId/score - Update user\'s score
 app.put("/users/:userId/score", (request, response) => {
     const { userId } = request.params;
     const { score } = request.body;
@@ -104,8 +102,6 @@ app.put("/users/:userId/score", (request, response) => {
     });
 });
 
-
-// GET /ranking - Get top 10 scores
 app.get("/ranking", (request, response) => {
     const selectCommand = `
         SELECT name, score FROM users
