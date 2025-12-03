@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showSignup = document.getElementById('show-signup');
     const showLogin = document.getElementById('show-login');
 
-    const backendUrl = 'http://localhost:3333';
+    const backendUrl = 'https://edutec-pied.vercel.app';
 
     showSignup.addEventListener('click', (e) => {
         e.preventDefault();
@@ -33,9 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                const { token } = await response.json();
-                localStorage.setItem('token', token);
-                window.location.href = '../index.html'; 
+                const data = await response.json();
+                localStorage.setItem('token', data.token);
+
+                const userName = data.name || email.split('@')[0];
+                localStorage.setItem('user', userName);
+                window.location.href = '/frontend/index.html'; 
             } else {
                 alert('Falha no login. Verifique seu email e senha.');
             }
@@ -74,6 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json()
         alert(data.mensage)
 
-        window.location.href = "../frontend/index.html"
+        window.location.href = "/frontend/index.html"
     }
 });
