@@ -35,10 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 const data = await response.json();
                 localStorage.setItem('token', data.token);
-
                 const userName = data.name || email.split('@')[0];
                 localStorage.setItem('user', userName);
-                window.location.href = '/frontend/index.html'; 
+                // Redirect to homepage using a relative path for Vercel
+                window.location.href = '../../index.html'; 
             } else {
                 alert('Falha no login. Verifique seu email e senha.');
             }
@@ -66,17 +66,26 @@ document.addEventListener('DOMContentLoaded', () => {
             password
         }
 
-        const response = await fetch(`${backendUrl}/cadastrar`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({ user }) 
-        })
-
-        const data = await response.json()
-        alert(data.mensage)
-
-        window.location.href = "/frontend/index.html"
+        try {
+            const response = await fetch(`${backendUrl}/cadastrar`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(user) 
+            })
+    
+            const data = await response.json()
+            alert(data.mensage)
+    
+            if(response.ok) {
+                // After successful signup, show the login form
+                signupView.style.display = 'none';
+                loginView.style.display = 'block';
+            }
+        } catch (error) {
+            console.error('Erro durante o cadastro:', error);
+            alert('Ocorreu um erro durante o cadastro. Por favor, tente novamente.');
+        }
     }
 });
