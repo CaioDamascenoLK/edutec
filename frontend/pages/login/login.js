@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const showSignup = document.getElementById('show-signup');
     const showLogin = document.getElementById('show-login');
 
-    const backendUrl = 'https://33637-firebase-edutecgit-1755167074922.cluster-kc2r6y3mtba5mswcmol45orivs.cloudworkstations.dev';
+    const backendUrl = 'http://localhost:3333';
 
     showSignup.addEventListener('click', (e) => {
         e.preventDefault();
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('login-password').value;
 
         try {
-            const response = await fetch(`https://3333-firebase-edutecgit-1755167074922.cluster-kc2r6y3mtba5mswcmol45orivs.cloudworkstations.dev/login`, {
+            const response = await fetch(`${backendUrl}/login`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email, password })
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 const { token } = await response.json();
                 localStorage.setItem('token', token);
-                window.location.href = '../page6/index.html'; 
+                window.location.href = '../frontend/index.html'; 
             } else {
                 alert('Falha no login. Verifique seu email e senha.');
             }
@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             password
         }
 
-        const response = await fetch(`https://33637-firebase-edutecgit-1755167074922.cluster-kc2r6y3mtba5mswcmol45orivs.cloudworkstations.dev/cadastrar`, {
+        const response = await fetch(`${backendUrl}/cadastrar`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -74,6 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json()
         alert(data.mensage)
 
-        window.location.href = "../index.html"
+        window.location.href = "../frontend/index.html"
     }
 });
