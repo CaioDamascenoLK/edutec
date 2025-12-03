@@ -1,5 +1,6 @@
-@import "/frontend/css/global.css";
-@import "/frontend/css/nav.css";
+@import "./css/global.css";
+@import "./css/nav.css";
+
 #pg{
     color: var(--verde);
 }
