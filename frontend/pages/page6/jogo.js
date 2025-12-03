@@ -21,9 +21,7 @@
       tituloResultado: $("#titulo-resultado"),
     };
   
-    const currentHost = window.location.host;
-    const backendHost = currentHost.replace(/^\d+/, '3000');
-    const backendUrl = `https://${backendHost}`;
+    const backendUrl = 'http://localhost:3333';
 
     let pontos = 0;
     let vidas = 3;
@@ -165,29 +163,31 @@
     async function fimDeJogo() {
       trocarTela('resultado');
       hud.tituloResultado.textContent = vidas <= 0 ? "Fim de Jogo 😵" : "Fim do ciclo!";
-      hud.resumo.innerHTML = `Você fez <strong>${pontos}</strong> pontos no nível <strong>${nivel}</strong>.<br>
-        Dica: treine os atalhos 1–4 e tente manter combos de acertos para ganhar bônus.`;
-      
-      const token = localStorage.getItem('token');
-      if (token) {
-        try {
-            const response = await fetch(`${backendUrl}/ranking`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`
-                },
-                body: JSON.stringify({ score: pontos })
-            });
+      let resumoMsg = `Você fez <strong>${pontos}</strong> pontos no nível <strong>${nivel}</strong>.<br>Dica: treine os atalhos 1–4 e tente manter combos de acertos para ganhar bônus.`;
 
-            if (!response.ok) {
-                console.error('Falha ao enviar pontuação para o ranking.');
-            }
-        } catch (error) {
-            console.error('Erro ao conectar com o servidor do ranking:', error);
-        }
+      const userId = localStorage.getItem('id');
+      if (userId) {
+          try {
+              const response = await fetch(`${backendUrl}/users/${userId}/score`, {
+                  method: 'PUT',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({ score: pontos })
+              });
+
+              if (response.ok) {
+                  resumoMsg += "<br><strong>Sua pontuação foi salva!</strong>";
+              } else {
+                  resumoMsg += "<br><strong>Houve uma falha ao salvar sua pontuação.</strong>";
+              }
+          } catch (error) {
+              resumoMsg += "<br><strong>Erro de conexão. Não foi possível salvar a pontuação.</strong>";
+              console.error('Erro ao conectar com o servidor:', error);
+          }
       }
-    }
+      hud.resumo.innerHTML = resumoMsg;
+  }
   
     function resetar() {
       pontos = 0;
@@ -211,11 +211,11 @@
     });
 
     $("#btn-ranking").addEventListener('click', () => {
-      window.location.href = "ranking/ranking.html";
+      window.location.href = "../ranking/ranking.html";
     });
 
     $("#btn-ver-ranking").addEventListener('click', () => {
-      window.location.href = "ranking/ranking.html";
+      window.location.href = "../ranking/ranking.html";
     });
   
     window.addEventListener('keydown', (ev) => {

@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        if (!localStorage.getItem('token')) {
+            window.location.href = '../login/login.html';
+        }
+    </script>
     <link href="https://fonts.cdnfonts.com/css/lemonmilk" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/tt-drugs-trial" rel="stylesheet">
     <title>Jogo</title>
@@ -59,5 +64,26 @@
         </section>
       </main>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = localStorage.getItem('user');
+            const userInfo = document.getElementById('user-info');
+            const userNameSpan = document.getElementById('user-name');
+            const logoutButton = document.getElementById('logout-button');
+
+            if (user) {
+                // User is logged in
+                if(userInfo) userInfo.style.display = 'flex';
+                if(userNameSpan) userNameSpan.textContent = `Olá: ${user}`;
+
+                if(logoutButton) logoutButton.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('user');
+                    window.location.href = '../../index.html';
+                });
+            }
+        });
+    </script>
   </body>
 </html>
