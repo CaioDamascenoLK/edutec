@@ -1,59 +1,86 @@
+@import "/frontend/css/global.css";
+@import "/frontend/css/nav.css";
+
 body {
+    margin: 0;
+    padding: 0;
     font-family: 'Lemon/Milk', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+}
+
+.page-wrapper {
+    width: 100%;
+    height: 100vh;
     display: flex;
+}
+
+.left-side {
+    width: 50%;
+    background-color: var(--home);
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--branco);
+}
+
+.robot-img {
+    width: 42rem;
+    margin-top: 8rem;
+    height: auto;
+    margin-bottom: 8rem;
+    border-radius: 2rem;
+}
+
+.right-side {
+    width: 50%;
+    background-color: var(--fundo);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.container {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-    width: 80%;
-    max-width: 500px;
-}
-
-h1 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: #333;
 }
 
 #ranking-list {
-    list-style: none;
     padding: 0;
-    margin-bottom: 2rem;
+    margin: 0;
+    list-style: none;
+    width: 45rem;
 }
 
 #ranking-list li {
+    width: 100%;
+    background-color: var(--verde);
+    padding: 2rem 1.8rem;
+    border-radius: .8rem;
     display: flex;
     justify-content: space-between;
-    padding: 0.75rem 1.5rem;
-    border-bottom: 1px solid #eee;
-    font-size: 1.1rem;
+    align-items: center;
+    margin: 1.2rem 0;
+    color: black;
+    font-size: 1.7rem;
 }
 
-#ranking-list li:first-child {
+#ranking-list li span:first-child {
+    font-weight: 600;
+}
+
+#ranking-list li span:last-child {
     font-weight: bold;
-    color: #ff9800;
 }
 
-.btn {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
+.btn-home {
+    margin-top: 4rem;
+    padding: 1.1rem 9rem;
+    border-radius: .5rem;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    background-color: var(--home);
+    color: black;
+    font-size: 1.8rem;
 }
-
-.btn:hover {
-    background-color: #45a049;
+.btn-home:hover {
+    padding: 1.3rem 8.2rem;
+    color: black;
+    background-color: var(--verde);
 }
