@@ -21,7 +21,7 @@
       tituloResultado: $("#titulo-resultado"),
     };
   
-    const backendUrl = 'http://localhost:3333';
+    const backendUrl = 'https://edutec-pied.vercel.app';
 
     let pontos = 0;
     let vidas = 3;

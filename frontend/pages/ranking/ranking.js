@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const rankingList = document.getElementById("ranking-list");
 
-    const backendUrl = 'http://localhost:3333';
+    const backendUrl = 'https://edutec-pied.vercel.app';
 
     fetch(`${backendUrl}/ranking`)
         .then(response => response.json())

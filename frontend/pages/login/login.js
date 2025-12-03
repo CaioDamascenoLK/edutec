@@ -33,11 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                const { token, name, id } = await response.json();
+                const { token } = await response.json();
                 localStorage.setItem('token', token);
-                localStorage.setItem('user', name);
-                localStorage.setItem('id', id);
-                window.location.href = '../../index.html'; 
+                window.location.href = '../index.html'; 
             } else {
                 alert('Falha no login. Verifique seu email e senha.');
             }
@@ -76,6 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await response.json()
         alert(data.mensage)
 
-        window.location.href = "../../index.html"
+        window.location.href = "../frontend/index.html"
     }
 });
