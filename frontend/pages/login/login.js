@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('token', data.token);
                 const userName = data.name || email.split('@')[0];
                 localStorage.setItem('user', userName);
-                // Redirect to homepage using a relative path for Vercel
                 window.location.href = '../../index.html'; 
             } else {
                 alert('Falha no login. Verifique seu email e senha.');
@@ -79,7 +78,6 @@ document.addEventListener('DOMContentLoaded', () => {
             alert(data.mensage)
     
             if(response.ok) {
-                // After successful signup, show the login form
                 signupView.style.display = 'none';
                 loginView.style.display = 'block';
             }

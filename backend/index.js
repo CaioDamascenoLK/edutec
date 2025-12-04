@@ -32,7 +32,7 @@ app.get("/", (request, response) => {
     })
 })
 
-app.post("/login", (request, response)=>{
+app.post("/login", (request, response)=> {
     const {email, password} = request.body;
 
 
@@ -50,14 +50,14 @@ app.post("/login", (request, response)=>{
 })
 
 app.post("/cadastrar", (request, response) => {
-    const { user } = request.body
+    const { name, email, password } = request.body
 
     const insertCommand = `
         INSERT INTO users(name, email, password)
         VALUES(?, ?, ?)
     `
 
-    database.query(insertCommand, [user.name, user.email, user.password], (error) => {
+    database.query(insertCommand, [name, email, password], (error) => {
         if (error) {
             console.log(error)
             return response.status(500).json({ error: "erro no cadastro" })
