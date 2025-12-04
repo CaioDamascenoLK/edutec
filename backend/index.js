@@ -75,30 +75,14 @@ app.put("/users/:userId/score", (request, response) => {
         return response.status(400).json({ error: "Score is required" });
     }
 
-    const selectScoreCommand = "SELECT score FROM users WHERE id = ?";
-    database.query(selectScoreCommand, [userId], (error, results) => {
-        if (error) {
-            console.log("[SCORE UPDATE] Error selecting score:", error);
-            return response.status(500).json({ error: "Error getting user score" });
+    const updateCommand = "UPDATE users SET score = ? WHERE id = ?";
+    database.query(updateCommand, [score, userId], (updateError, updateResult) => {
+        if (updateError) {
+            console.log("[SCORE UPDATE] Error updating score:", updateError);
+            return response.status(500).json({ error: "error updating score" });
         }
-
-        const currentScore = results[0] ? results[0].score : null;
-        console.log(`[SCORE UPDATE] User ${userId} - Current Score: ${currentScore}, New Score: ${score}`);
-
-        if (currentScore === null || score > currentScore) {
-            const updateCommand = "UPDATE users SET score = ? WHERE id = ?";
-            database.query(updateCommand, [score, userId], (updateError, updateResult) => {
-                if (updateError) {
-                    console.log("[SCORE UPDATE] Error updating score:", updateError);
-                    return response.status(500).json({ error: "error updating score" });
-                }
-                console.log(`[SCORE UPDATE] Score for user ${userId} updated to ${score}`);
-                response.json({ message: "Score updated successfully" });
-            });
-        } else {
-            console.log(`[SCORE UPDATE] Score for user ${userId} not updated, new score is not higher.`);
-            response.json({ message: "Score not updated, new score is not higher" });
-        }
+        console.log(`[SCORE UPDATE] Score for user ${userId} updated to ${score}`);
+        response.json({ message: "Score updated successfully" });
     });
 });
 
