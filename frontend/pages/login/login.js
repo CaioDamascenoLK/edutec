@@ -35,6 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (response.ok) {
                 const data = await response.json();
                 localStorage.setItem('token', data.token);
+                localStorage.setItem('id', data.id);
                 const userName = data.name || email.split('@')[0];
                 localStorage.setItem('user', userName);
                 window.location.href = '../../index.html'; 
