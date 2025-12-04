@@ -2,7 +2,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const rankingList = document.getElementById("ranking-list");
 
     const backendUrl = 'https://edutec-pied.vercel.app';
+    const user = JSON.parse(localStorage.getItem('ranking'))
 
+    if (user)
     fetch(`${backendUrl}/ranking`)
         .then(response => response.json())
         .then(data => {
